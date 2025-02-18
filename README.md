@@ -4,8 +4,25 @@ This project is a simple example to understand how Python handles dynamic module
 
 ## 📌 Project Structure
 
+### pmip-dynmical-init
+This project load module directly on the **__init__** file
 ```
-/pmip
+/pmip-dynmical-init
+  ├── __main__.py         # Main entry point
+  ├── commands/           # Directory containing commands
+  │   ├── make/           # Subdirectory containing commands
+  │   │   ├── __init__.py # Marks this directory as a package
+  │   │   ├── sub.py      # Example subcommand module
+  │   ├── __init__.py     # Marks this directory as a package
+  │   ├── count.py        # Example command module
+  │   ├── add.py          # Example command module
+  ├── __main__.spec       # Information about the build
+```
+
+### pmip-dynmical-spec
+This project load module inside spec file
+```
+/pmip-dynmical-spec
   ├── __main__.py        # Main entry point
   ├── commands/          # Directory containing commands
   │   ├── __init__.py    # Marks this directory as a package

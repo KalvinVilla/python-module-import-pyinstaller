@@ -1,13 +1,17 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import collect_submodules
 
+datas = [
+    ('src/commands', 'commands')
+]
+
 hidden_imports = collect_submodules("commands")
 
 a = Analysis(
-    ['__main__.py'],
-    pathex=[],
+    ['src/__main__.py'],
+    pathex=['src'],
     binaries=[],
-    datas=[],
+    datas=datas,
     hiddenimports=hidden_imports,
     hookspath=[],
     hooksconfig={},

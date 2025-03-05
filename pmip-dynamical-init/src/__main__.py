@@ -1,9 +1,10 @@
 import importlib
 import commands  # Importer le package principal
 
+
 if __name__ == "__main__":
     commands_list = []
-
+    print("Running all commands...")
     # Importer dynamiquement toutes les commandes listées dans `commands.__all__`
     for module_name in commands.__all__:
         try:
